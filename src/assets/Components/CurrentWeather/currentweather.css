@@ -1,0 +1,29 @@
+.weatherBoard{
+    background: #ffffff;
+}
+.box{
+    width: 9rem;
+    height: 9rem;
+    background: #D2E8EB;
+}
+.humidityIcon,.precipitationIcon,.windIcon{
+    width: 4rem;
+    height: 4rem;
+}
+.weatherIcon{
+    width: 7.5rem;
+    height: 7.5rem;
+}
+.tempValue{
+    font-size: 5rem;
+}
+.tempName{
+    font-size: 1.5rem;
+}
+.cityName{
+    font-size: 1rem;
+}
+.humidityValue, .humidity, .precipitationValue,.precipitation,.windValue,.wind{
+    font-size: 1.5rem;
+
+}

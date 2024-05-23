@@ -1,0 +1,23 @@
+.event{
+    background: #ffffff;
+}
+.addButton,.addEventBar{
+    background: #D2E8EB;
+    border: none;
+}
+.addIcon{
+    width: 1rem;
+    height: 1rem;
+}
+.addEventBar{
+    height: 2rem;
+    width: 13rem;
+}
+.event_list{
+    height: 19rem;
+    background: #D2E8EB;
+}
+.infoIcon{
+    width: 0.5rem;
+    height: 0.5rem;
+}

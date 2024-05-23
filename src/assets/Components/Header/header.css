@@ -1,0 +1,14 @@
+.header__logo{
+    width: 10%;
+}
+.header__logo img{
+    width: 5rem;
+    height: 5rem;
+}
+.title{
+    width: 90%;
+}
+.title h3{
+    font-size: 2rem;
+    color: #000000;
+}
