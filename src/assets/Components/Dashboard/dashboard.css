@@ -4,3 +4,12 @@
 .right{
     width: 70%;
 }
+.weather_col{
+    width: 70%;
+}
+.activity_col{
+    width: 30%;
+}
+.hourly_col,.search_col,.event_col{
+    width: 100%;
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import searchIcon from '../../Images/search.png';
 import './Search.css';
 
-const Search = ({ onSubmit, onDateSubmit }) => {
+const Search = ({ onSubmit }) => {
   const [cityName, setCityName] = useState('');
   const [date, setDate] = useState('');
 
@@ -11,15 +11,16 @@ const Search = ({ onSubmit, onDateSubmit }) => {
   };
 
   const handleDateChange = (e) => {
+    console.log(e.target.value);
     setDate(e.target.value);
+    if(cityName ==""){
+      return alert("Please enter city name first")
+    }
+    searchCity(cityName,e.target.value)
   };
 
   const searchCity = () => {
-    if (date) {
-      onDateSubmit(cityName, date); // Call the historical weather API if date is provided
-    } else {
-      onSubmit(cityName); // Call the current weather API if no date is provided
-    }
+    onSubmit(cityName, date); // Always call onSubmit with both cityName and date
   };
 
   return (
@@ -39,9 +40,9 @@ const Search = ({ onSubmit, onDateSubmit }) => {
         </div>
         <div className="searchDate m-2">
           <input
-            className='dateBar p-2'
+            className="dateBar p-2"
             type="date"
-            placeholder='YYYY-MM-DD'
+            placeholder="YYYY-MM-DD"
             value={date}
             onChange={handleDateChange}
           />

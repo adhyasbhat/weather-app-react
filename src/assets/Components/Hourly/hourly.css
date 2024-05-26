@@ -1,0 +1,39 @@
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hourBoard{
+    background: #ffffff;
+  }
+  .carouselBox{
+    background: #D2E8EB;
+    width: 9rem;
+    height: 9rem;
+  }
+  .weatherIcons{
+    width: 4rem;
+    height: 4rem;
+  }
+  .carousel-root{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 1024px) {
+    .carousel .slide {
+      width: 50% !important; /* 2 items on tablets */
+    }
+  }
+  
+  @media (max-width: 464px) {
+    .carousel .slide {
+      width: 100% !important; /* 1 item on mobile */
+    }
+  }
+  
+  .carousel .slide {
+    width: 25% !important; /* 4 items on desktop */
+  }
+  
