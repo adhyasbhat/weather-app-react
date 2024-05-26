@@ -17,7 +17,7 @@ const Dashboard = () => {
       const formattedDate = today.toISOString().split('T')[0];
       const response = await axios.get(`http://api.weatherapi.com/v1/history.json?key=f2cc0a0e73ec4eb7b4955211242005`, {
         params: {
-          q: cityName,
+          q: cityName || "Delhi",
           dt: date || formattedDate,
         }
       });
