@@ -1,39 +1,34 @@
-.carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hourBoard{
-    background: #ffffff;
-  }
-  .carouselBox{
-    background: #D2E8EB;
-    width: 9rem;
-    height: 9rem;
-  }
-  .weatherIcons{
-    width: 4rem;
-    height: 4rem;
-  }
-  .carousel-root{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  @media (max-width: 1024px) {
-    .carousel .slide {
-      width: 50% !important; /* 2 items on tablets */
-    }
-  }
-  
-  @media (max-width: 464px) {
-    .carousel .slide {
-      width: 100% !important; /* 1 item on mobile */
-    }
-  }
-  
-  .carousel .slide {
-    width: 25% !important; /* 4 items on desktop */
-  }
-  
+
+ .hourBoard {
+  background: #ffffff;
+  /* padding: 20px; */
+
+}
+
+.hourBox {
+  background: #D2E8EB;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 8rem;
+}
+
+.weatherIcons {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}

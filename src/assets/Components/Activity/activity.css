@@ -1,13 +1,15 @@
 .css-13cymwt-control,.css-t3ipsp-control{
     background: #D2E8EB !important;
-    width: 15.35rem !important;
+    width: 100%!important;
     height: 2rem !important;
 }
 .activity{
     background:#ffffff;
+    height: 96%;
 }
 .recommendationList{
     background: #D2E8EB;
+    height: 13.3rem;
 }
 .recommendationItem div strong{
     font-size: 1.5rem;

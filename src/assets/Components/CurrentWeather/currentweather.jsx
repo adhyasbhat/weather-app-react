@@ -39,7 +39,7 @@ const CurrentWeather = ({ apiData }) => {
                   <div className="precipitationIconDiv text-center">
                     <img className="precipitationIcon" src={precipitation} alt="precipitation" />
                   </div>
-                  <div className="precipitationValue text-center">{apiData.forecast.forecastday[0].day.condition.totalprecip_in}</div>
+                  <div className="precipitationValue text-center">{apiData.forecast.forecastday[0].day.totalprecip_in}</div>
                   <div className="precipitation text-center">Precipitation</div>
                 </div>
               </div>

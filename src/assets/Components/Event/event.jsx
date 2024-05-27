@@ -1,37 +1,3 @@
-// import React from 'react';
-// import { Tooltip as ReactTooltip } from 'react-tooltip';
-// import 'react-tooltip/dist/react-tooltip.css';
-// import add from '../../Images/add.png';
-// import info from '../../Images/info.png';
-// import './event.css';
-
-// const EventPlanner = ({apiData}) => {
-//   return (
-//     <div className="event m-2 d-flex justify-content-center align-items-center">
-//       <div className="m-2">
-//         <div className="event_header text-center d-flex justify-content-center">
-//           <h5>Event Planner</h5>
-//           <span className="mx-1">
-//             <img className="infoIcon" src={info} alt="info icon" data-tip data-for="infoTooltip" />
-//             <ReactTooltip id="infoTooltip" place="top" effect="solid">
-//               Please select the date before adding the event
-//             </ReactTooltip>
-//           </span>
-//         </div>
-//         <div className="event_list m-1"></div>
-//         <div className="addEvent d-flex">
-//           <input className="addEventBar p-2 m-1" type="text" placeholder="Enter the event you want to plan" />
-//           <button className="addButton m-1">
-//             <img className="addIcon" src={add} alt="add icon" />
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EventPlanner;
-
 import React, { useState, useEffect } from 'react';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
@@ -42,9 +8,10 @@ import './event.css';
 const EventPlanner = ({ apiData }) => {
   const [events, setEvents] = useState([]);
   const [newEvent, setNewEvent] = useState('');
-  // console.log(apiData, "apiData in event");
-   const selectedDate = apiData.forecast.forecastday[0].date;
 
+  // Ensure apiData and forecast are available before accessing them
+  const selectedDate = apiData?.forecast?.forecastday[0]?.date;
+  const city = apiData?.location?.name;
   useEffect(() => {
     if (selectedDate) {
       fetch(`http://localhost:5777/events?date=${selectedDate}`)
@@ -58,7 +25,8 @@ const EventPlanner = ({ apiData }) => {
     const event = {
       id: Date.now(),
       date: selectedDate,
-      name: newEvent
+      name: newEvent,
+      city:city
     };
 
     fetch('http://localhost:5777/events', {
@@ -78,7 +46,7 @@ const EventPlanner = ({ apiData }) => {
 
   return (
     <div className="event m-2 d-flex justify-content-center align-items-center">
-      <div className="m-2">
+      <div className="m-2 w-100">
         <div className="event_header text-center d-flex justify-content-center">
           <h5>Event Planner</h5>
           <span className="mx-1">
@@ -88,7 +56,7 @@ const EventPlanner = ({ apiData }) => {
             </ReactTooltip>
           </span>
         </div>
-        <div className="event_list m-1">
+        <div className="event_list m-1 p-2">
           {events.map(event => (
             <div key={event.id} className="event_item">
               {event.name}

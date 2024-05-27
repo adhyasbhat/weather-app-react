@@ -5,11 +5,14 @@
     width: 70%;
 }
 .weather_col{
-    width: 70%;
+    width: 55%;
 }
 .activity_col{
-    width: 30%;
+    width: 45%;
 }
 .hourly_col,.search_col,.event_col{
     width: 100%;
+}
+.event_col{
+    height: 80%;
 }

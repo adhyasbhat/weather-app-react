@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Search from '../Search/Search';
 import Event from '../Event/event';
@@ -9,25 +9,31 @@ import './dashboard.css';
 
 const Dashboard = () => {
   const [apiData, setApiData] = useState(null);
-
-  const getWeatherData = async (cityName, date) => {
+  
+  const getWeatherData = async (cityName = "Bengaluru", date) => {
     try {
-      console.log("userDate",date)
       const today = new Date();
       const formattedDate = today.toISOString().split('T')[0];
+      console.log("userDate", date);
+     
       const response = await axios.get(`http://api.weatherapi.com/v1/history.json?key=f2cc0a0e73ec4eb7b4955211242005`, {
         params: {
-          q: cityName || "Delhi",
+          q: cityName,
           dt: date || formattedDate,
         }
       });
-      console.log(response.data)
+      console.log(response.data);
       setApiData(response.data); // Store the historical weather API response in the state
     } catch (error) {
       console.error('Error fetching historical data:', error);
     }
   };
 
+  // Use useEffect to call getWeatherData when the component mounts
+  useEffect(() => {
+    getWeatherData(); // Fetch weather data for default city "Delhi" and today's date
+  }, []);
+  
   return (
     <div className="container d-flex justify-content-center">
       <div className="left">

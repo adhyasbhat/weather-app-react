@@ -20,7 +20,7 @@ const ActivityComponent = ({apiData}) => {
 
   return (
     <div className="activity m-2 d-flex justify-content-center align-items-center">
-      <div className="m-2">
+      <div className="m-2 w-100">
         <div className="activityTitle text-center">
           <h5>Activity</h5>
         </div>
@@ -36,7 +36,7 @@ const ActivityComponent = ({apiData}) => {
           <div className="recommendationTitle text-center">
             <h5>Recommendations</h5>
           </div>
-          <div className="recommendationList">
+          <div className="recommendationList p-2">
             {recommendations && recommendations.length > 0 ? (
               recommendations.map((rec, index) => (
                 <div key={index} className="recommendationItem">

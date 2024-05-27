@@ -25,7 +25,7 @@ const Search = ({ onSubmit }) => {
 
   return (
     <div className="searchBlock m-2 d-flex justify-content-center">
-      <div>
+      <div className='w-100'>
         <div className="searchcityDiv d-flex">
           <input
             className="searchBar m-2 p-2"

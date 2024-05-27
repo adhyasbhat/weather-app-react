@@ -3,8 +3,8 @@
     align-items: center;
 }
 .searchBar{
-    width: 13rem;
     height: 2rem;
+    width: 86%;
 }
 .searchIcon{
     width: 1rem;
@@ -15,6 +15,6 @@
     border: none;
 }
 .dateBar{
-    width: 15.35rem;
     height: 2rem;
+    width: 100%;
 }
