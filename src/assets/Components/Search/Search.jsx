@@ -11,16 +11,21 @@ const Search = ({ onSubmit }) => {
   };
 
   const handleDateChange = (e) => {
-    console.log(e.target.value);
-    setDate(e.target.value);
-    if(cityName ==""){
-      return alert("Please enter city name first")
+    const newDate = e.target.value;
+    setDate(newDate);
+    if (cityName !== '') {
+      onSubmit(cityName, newDate);
+    } else {
+      alert("Please enter city name first");
     }
-    searchCity(cityName,e.target.value)
   };
 
-  const searchCity = () => {
-    onSubmit(cityName, date); // Always call onSubmit with both cityName and date
+  const handleSearchClick = () => {
+    if (cityName === '') {
+      alert("Please enter city name first");
+    } else {
+      onSubmit(cityName, date);
+    }
   };
 
   return (
@@ -34,7 +39,7 @@ const Search = ({ onSubmit }) => {
             value={cityName}
             onChange={handleInputChange}
           />
-          <button className="searchButton my-2" onClick={searchCity}>
+          <button className="searchButton my-2" onClick={handleSearchClick}>
             <img className="searchIcon" src={searchIcon} alt="search icon" />
           </button>
         </div>

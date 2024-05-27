@@ -77,7 +77,7 @@ const Hourly = ({ apiData }) => {
       infinite: true,
       speed: 500,
       slidesToShow: 8,
-      slidesToScroll: 5,
+      slidesToScroll: 1,
       centerMode: true,
       centerPadding: '20px', // Adds padding around the centered slide
     };
