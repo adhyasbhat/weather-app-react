@@ -7,6 +7,8 @@ import Activity from '../Activity/activity';
 import Hourly from '../Hourly/hourly';
 import './dashboard.css';
 
+import.meta.env
+console.log(import.meta.env.VITE_SOME_KEY)
 const Dashboard = () => {
   const [apiData, setApiData] = useState(null);
   const [cityName, setCityName] = useState('Bengaluru');

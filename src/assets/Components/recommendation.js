@@ -8,16 +8,16 @@ export function recommendation (temp,humidity,windspeed,category){
     console.log("here2")
         return [{Activity:'Pest monitoring and control, planting heat-tolerant crops',Tips:'Use drip irrigation to conserve water, monitor plant health closely'}]
     }
-    else if((temp > 35) && (humidity >=70 && humidity <=90) && (windspeed >=20 && windspeed <=40) && category == "Traveller"){
+    else if((temp > 25) && (humidity >=70 && humidity <=90) && (windspeed >=10 && windspeed <=40) && category == "Traveller"){
         return[{Activity:'Visiting indoor attractions, swimming, visiting botanical gardens',Tips:'Stay hydrated, wear light clothing, and take breaks in cool areas'}]
     }
-    else if((temp > 35) && (humidity >=70 && humidity <=90) && (windspeed >=20 && windspeed <=40) && category == "Farmer"){
+    else if((temp > 25) && (humidity >=70 && humidity <=90) && (windspeed >=10 && windspeed <=40) && category == "Farmer"){
         return[{Activity:'Planting heat-tolerant crops, pest monitoring and control',Tips:'Use drip irrigation to conserve water, monitor plant health closely'}]
     }
-    else if((temp >= 0 && temp <=20) && (humidity >=70 && humidity <=90) && (windspeed <=20) && category == "Traveller"){
+    else if((temp >= 0 && temp <=25) && (humidity >=70 && humidity <=90) && (windspeed <=22) && category == "Traveller"){
         return[{Activity:'Visiting historic sites, taking guided city tours, indoor rock climbing.',Tips:'Use waterproof footwear, carry an umbrella or raincoat'}]
     }
-    else if((temp >= 0 && temp <=20) && (humidity >=70 && humidity <=90) && (windspeed <=20) && category == "Farmer"){
+    else if((temp >= 0 && temp <=25) && (humidity >=70 && humidity <=90) && (windspeed <=22) && category == "Farmer"){
         return[{Activity:'Harvesting winter crops, pruning fruit trees, planting winter crops.',Tips:'Use frost protection measures, monitor plant health closely'}]
     }
     else if((temp <0) && (humidity >=70 && humidity <=90) && (windspeed <=40) && category == "Traveller"){
