@@ -4,7 +4,7 @@ import 'react-tooltip/dist/react-tooltip.css';
 import add from '../../Images/add.png';
 import info from '../../Images/info.png';
 import './event.css';
-
+const url = import.meta.env.VITE_SOME_URL
 const EventPlanner = ({ apiData }) => {
   const [events, setEvents] = useState([]);
   const [newEvent, setNewEvent] = useState('');
@@ -14,7 +14,7 @@ const EventPlanner = ({ apiData }) => {
   const city = apiData?.location?.name;
   useEffect(() => {
     if (selectedDate) {
-      fetch(`http://localhost:5777/events?date=${selectedDate}`)
+      fetch(`${url}?date=${selectedDate}`)
         .then(response => response.json())
         .then(data => setEvents(data))
         .catch(error => console.error('Error fetching events:', error));

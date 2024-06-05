@@ -6,9 +6,9 @@ import CurrentWeather from '../CurrentWeather/currentweather';
 import Activity from '../Activity/activity';
 import Hourly from '../Hourly/hourly';
 import './dashboard.css';
-
-import.meta.env
-console.log(import.meta.env.VITE_SOME_KEY)
+// import.meta.env
+const apikey = import.meta.env.VITE_SOME_KEY
+// const url = import.meta.env.BASE_URL
 const Dashboard = () => {
   const [apiData, setApiData] = useState(null);
   const [cityName, setCityName] = useState('Bengaluru');
@@ -19,7 +19,7 @@ const Dashboard = () => {
       const today = new Date();
       const formattedDate = date || today.toISOString().split('T')[0];
       
-      const response = await axios.get(`http://api.weatherapi.com/v1/history.json?key=f2cc0a0e73ec4eb7b4955211242005`, {
+      const response = await axios.get(`http://api.weatherapi.com/v1/history.json?key=${apikey}`, {
         params: {
           q: cityName,
           dt: formattedDate,
