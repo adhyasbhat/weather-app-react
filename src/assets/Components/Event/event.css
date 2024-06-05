@@ -16,6 +16,7 @@
 .event_list{
     height: 22.7rem;
     background: #D2E8EB;
+    overflow-x: auto;
 }
 .infoIcon{
     width: 0.5rem;
