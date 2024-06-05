@@ -31,3 +31,68 @@
     width: 20rem;
     height: 20rem;
 }
+@media (max-width: 1398px){
+    .box{
+        width: 7rem;
+        height: 7rem;
+    }
+    .humidityValue, .humidity, .precipitationValue,.precipitation,.windValue,.wind{
+        font-size: 1.1rem;
+    
+    }
+}
+@media (max-width: 1195px){
+    .box{
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+    .humidityValue, .humidity, .precipitationValue,.precipitation,.windValue,.wind{
+        font-size: 1.1rem;
+    
+    }
+    .humidityIcon,.precipitationIcon,.windIcon{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .tempValue{
+        font-size: 4rem;
+    }
+}
+@media (max-width: 980px){
+    .box{
+        width: 5rem;
+        height: 5rem;
+    }
+    .humidityValue, .humidity, .precipitationValue,.precipitation,.windValue,.wind{
+        font-size: 1rem;
+    
+    }
+    .humidityIcon,.precipitationIcon,.windIcon{
+        width: 2rem;
+        height: 2rem;
+    }
+    .tempValue{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 785px){
+    .box{
+        width: 4rem;
+        height: 4rem;
+    }
+    .humidityValue, .humidity, .precipitationValue,.precipitation,.windValue,.wind{
+        font-size: 0.9rem;
+    
+    }
+    .humidityIcon,.precipitationIcon,.windIcon{
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .tempValue{
+        font-size: 2.5rem;
+    }
+    .weatherIcon{
+        width: 5rem;
+        height: 5rem;
+    }
+}

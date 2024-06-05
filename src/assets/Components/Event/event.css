@@ -18,7 +18,31 @@
     background: #D2E8EB;
     overflow-x: auto;
 }
-.infoIcon{
-    width: 0.5rem;
-    height: 0.5rem;
+@media (max-width: 1398px){
+    .event_list{
+        height: 22rem;
+    }
+}
+@media (max-width: 1195px){
+    .event_list{
+        height: 18.5rem;
+    }
+}
+@media (max-width: 982px){
+    .event_list{
+        height: 16.5rem;
+    }
+}
+@media (max-width: 785px){
+    .addEventBar{
+        height: 1.5rem;
+        width: 80%;
+    }
+    .addIcon{
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    .event_list{
+        height: 15rem;
+    }
 }

@@ -17,3 +17,22 @@
 .recommendationItem div p{
     font-size: 1rem;
 }
+@media (max-width:1390px){
+    .activity{
+        height: 90%;
+    }
+    .recommendationList{
+        height: 12.7rem;
+    }
+}
+@media (max-width: 1195px){
+
+    .recommendationList{
+        height: 9.2rem;
+    }
+}
+@media (max-width:982px){
+    .recommendationList{
+        height: 7.2rem;
+    }
+}

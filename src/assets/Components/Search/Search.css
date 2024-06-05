@@ -18,3 +18,24 @@
     height: 2rem;
     width: 100%;
 }
+@media (max-width: 1398px){
+    .searchBar{
+        width: 80%;
+    }
+}
+@media (max-width: 785px){
+    .searchBar{
+        width: 70%;
+    }
+    .searchIcon{
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    .searchButton{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .dateBar{
+        height: 1.5rem;
+    }
+}
