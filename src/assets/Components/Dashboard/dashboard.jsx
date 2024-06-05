@@ -6,21 +6,20 @@ import CurrentWeather from '../CurrentWeather/currentweather';
 import Activity from '../Activity/activity';
 import Hourly from '../Hourly/hourly';
 import './dashboard.css';
-// import.meta.env
-const apikey = import.meta.env.VITE_SOME_KEY
-// const url = import.meta.env.BASE_URL
 const Dashboard = () => {
   const [apiData, setApiData] = useState(null);
   const [cityName, setCityName] = useState('Bengaluru');
   const [date, setDate] = useState('');
-
+const apikey = import.meta.env.VITE_WEATHER_API_KEY;
+const weatherApiUrl = import.meta.env.VITE_WEATHER_API_URL;
   const getWeatherData = async (cityName, date) => {
     try {
       const today = new Date();
       const formattedDate = date || today.toISOString().split('T')[0];
       
-      const response = await axios.get(`http://api.weatherapi.com/v1/history.json?key=${apikey}`, {
+      const response = await axios.get(weatherApiUrl, {
         params: {
+          key: apikey,
           q: cityName,
           dt: formattedDate,
         }
